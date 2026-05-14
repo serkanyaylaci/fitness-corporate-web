@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Katıl Bize - Kuzey Fitness</title>
+
+    <style>
+        :root {
+            --bg-color: #000;
+            --snd-bg-color: #111;
+            --text-color: #fff;
+            --main-color: #45ffca;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: system-ui;
+        }
+
+        body {
+            background: var(--bg-color);
+            color: var(--text-color);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 500px;
+            background: var(--snd-bg-color);
+            padding: 3rem;
+            border-radius: 2rem;
+            box-shadow: 0 0 25px rgba(69,255,202,0.15);
+            border: 1px solid rgba(69,255,202,0.2);
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 3rem;
+            margin-bottom: 2rem;
+        }
+
+        h1 span {
+            color: var(--main-color);
+        }
+
+        label {
+            font-size: 1.4rem;
+            display: block;
+            margin-top: 1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 1rem;
+            border-radius: 1rem;
+            border: 1px solid rgba(69,255,202,0.2);
+            background: #000;
+            color: #fff;
+            outline: none;
+        }
+
+        input:focus, textarea:focus {
+            border-color: var(--main-color);
+            box-shadow: 0 0 10px var(--main-color);
+        }
+
+        textarea {
+            resize: none;
+            height: 120px;
+        }
+
+        button {
+            width: 100%;
+            margin-top: 2rem;
+            padding: 1.2rem;
+            border: none;
+            border-radius: 1rem;
+            background: var(--main-color);
+            color: #000;
+            font-weight: bold;
+            font-size: 1.6rem;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            transform: scale(1.03);
+            box-shadow: 0 0 20px var(--main-color);
+        }
+
+        .back {
+            display: block;
+            text-align: center;
+            margin-top: 1.5rem;
+            color: var(--main-color);
+            text-decoration: none;
+            font-size: 1.3rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Kuzey <span>Fitness</span></h1>
+
+        <form onsubmit="return sendForm(event)">
+            <label>Ad Soyad</label>
+            <input type="text" id="name" required>
+
+            <label>E-posta</label>
+            <input type="email" id="email" required>
+
+            <label>Hedefin</label>
+            <input type="text" id="goal" placeholder="Yağ yakma / kas kazanma..." required>
+
+            <label>Mesaj</label>
+            <textarea id="message" required></textarea>
+
+            <button type="submit">Gönder</button>
+        </form>
+
+        <a class="back" href="index.html">← Ana sayfaya dön</a>
+    </div>
+
+    <script>
+        function sendForm(e) {
+            e.preventDefault();
+
+            const name = document.getElementById("name").value;
+
+            alert("Teşekkürler " + name + "! En kısa sürede dönüş yapacağız.");
+
+            return false;
+        }
+    </script>
+
+</body>
+</html>

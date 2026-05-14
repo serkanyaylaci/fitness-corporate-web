@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ödeme - Kuzey Fitness</title>
+
+    <style>
+        :root {
+            --bg: #000;
+            --card: #111;
+            --text: #fff;
+            --main: #45ffca;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: system-ui;
+        }
+
+        body {
+            background: var(--bg);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            color: var(--text);
+        }
+
+        .checkout {
+            width: 100%;
+            max-width: 500px;
+            background: var(--card);
+            padding: 3rem;
+            border-radius: 2rem;
+            border: 1px solid rgba(69,255,202,0.25);
+            box-shadow: 0 0 30px rgba(69,255,202,0.1);
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 2.8rem;
+            margin-bottom: 2rem;
+        }
+
+        h1 span {
+            color: var(--main);
+        }
+
+        .plan-box {
+            background: #000;
+            border: 1px solid rgba(69,255,202,0.2);
+            padding: 1.5rem;
+            border-radius: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .plan-box h2 {
+            font-size: 2rem;
+        }
+
+        .plan-box p {
+            font-size: 1.4rem;
+            opacity: 0.8;
+            margin-top: 0.5rem;
+        }
+
+        label {
+            font-size: 1.3rem;
+            display: block;
+            margin-top: 1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        input {
+            width: 100%;
+            padding: 1rem;
+            border-radius: 1rem;
+            background: #000;
+            border: 1px solid rgba(69,255,202,0.2);
+            color: #fff;
+            font-size: 1.4rem;
+            outline: none;
+        }
+
+        input:focus {
+            border-color: var(--main);
+            box-shadow: 0 0 10px var(--main);
+        }
+
+        .row {
+            display: flex;
+            gap: 1rem;
+        }
+
+        button {
+            width: 100%;
+            margin-top: 2rem;
+            padding: 1.2rem;
+            border: none;
+            border-radius: 1rem;
+            background: var(--main);
+            color: #000;
+            font-size: 1.6rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            transform: scale(1.03);
+            box-shadow: 0 0 20px var(--main);
+        }
+
+        .error {
+            color: red;
+            font-size: 1.3rem;
+            margin-top: 1rem;
+        }
+
+        .back {
+            display: block;
+            text-align: center;
+            margin-top: 1.5rem;
+            color: var(--main);
+            text-decoration: none;
+            font-size: 1.2rem;
+        }
+
+        .success {
+            display: none;
+            text-align: center;
+            margin-top: 1.5rem;
+            color: var(--main);
+            font-size: 1.4rem;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="checkout">
+
+    <h1>Kuzey <span>Fitness</span></h1>
+
+    <div class="plan-box">
+        <h2 id="planName">Premium Paket</h2>
+        <p id="planPrice">5500 TL / Aylık</p>
+    </div>
+
+    <label>Kart Numarası</label>
+    <input type="text" id="cardNumber" placeholder="1111 2222 3333 4444">
+
+    <label>İsim Soyisim</label>
+    <input type="text" id="cardName">
+
+    <div class="row">
+        <div>
+            <label>MM/YY</label>
+            <input type="text" id="cardDate">
+        </div>
+
+        <div>
+            <label>CVV</label>
+            <input type="text" id="cardCvv">
+        </div>
+    </div>
+
+    <div id="error" class="error"></div>
+
+    <button onclick="pay()">Ödemeyi Tamamla</button>
+
+    <div id="success" class="success">
+        ✔ Ödeme Başarılı (Demo)
+    </div>
+
+    <a class="back" href="index.html">← Geri dön</a>
+
+</div>
+
+<script>
+    function pay() {
+        const number = document.getElementById("cardNumber");
+        const name = document.getElementById("cardName");
+        const date = document.getElementById("cardDate");
+        const cvv = document.getElementById("cardCvv");
+        const error = document.getElementById("error");
+        const success = document.getElementById("success");
+
+        error.innerText = "";
+
+        if (
+            number.value.trim() === "" ||
+            name.value.trim() === "" ||
+            date.value.trim() === "" ||
+            cvv.value.trim() === ""
+        ) {
+            error.innerText = "⚠ Tüm alanları doldur!";
+            return;
+        }
+
+        if (number.value.length < 12) {
+            error.innerText = "⚠ Kart numarası hatalı!";
+            return;
+        }
+
+        if (cvv.value.length < 3) {
+            error.innerText = "⚠ CVV hatalı!";
+            return;
+        }
+
+        success.style.display = "block";
+    }
+</script>
+
+</body>
+</html>

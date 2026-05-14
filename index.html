@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.boxicons.com/3.0.8/fonts/basic/boxicons.min.css" rel="stylesheet">
+    <title>Kuzey Fitness</title>
+</head>
+<body>
+    <!-- Header Section Code-->
+     <header>
+        <a href="#home" class="logo">Kuzey <span>Fitness</span></a>
+        <div class="bx bx-menu" id="menu-icon"></div>
+        <ul class="navbar">
+            <li><a href="#home">Ana Sayfa</a></li>
+            <li><a href="#services">Hizmetlerimiz</a></li>
+            <li><a href="#plans">Fiyatlandırma</a></li>
+            <li><a href="#calculator">Ücretsiz Ölçüm</a></li>
+            <li><a href="#review">Müşteri Memnuniyeti</a></li>
+            <li><a href="#about">Hakkımızda</a></li>
+        </ul>
+        <div class="top-btn">
+            <a href="contact.html" class="nav-btn">Bize Ulaş</a>
+        </div>
+     </header>
+     <!-- Home Section Code-->
+     <section class="home" id="home">
+            <div class="home-content">
+                <h3>Bize Katıl</h3>
+                <h1>Hayallerindeki Fiziği</h1>
+                <h3><span class="multiple-text">İnşa Et</span></h3>
+                <p>Gücünü kuzeyden al sınırları zorla ve kuzeyli ol bahaneleri dışarıda bırak kendi zirvene tırman burada kaybetmek yok ya kazanırsın ya da daha güçlü denersin.</p>
+                <a href="contact.html" class="btn">Katıl Bize</a>
+            </div>
+            <div class="home-img">
+                    <img src="heroImage.png" alt="Home Image">
+                </div>
+     </section>
+     <!-- Services Section Code-->
+     <section class="services" id="services">
+        <h2 class="heading">Kuzeyden <span>Hizmetlerimiz</span></h2>
+        <div class="services-content">
+                <div class="row">
+                        <img src="image1.jpg" alt="">
+                        <h4>Özel Antrenör</h4>
+                </div>
+
+
+                <div class="row">
+                        <img src="image2.jpg" alt="">
+                        <h4>Ağırlıklı Antreman</h4>
+                </div>
+
+
+                <div class="row">
+                        <img src="image3.jpg" alt="">
+                        <h4>Kondisyon Antremanı</h4>
+                </div>
+
+
+                <div class="row">
+                        <img src="image4.jpg" alt="">
+                        <h4>Yağ Kaybı Antremanı</h4>
+                </div>
+
+
+                <div class="row">
+                        <img src="image5.jpg" alt="">
+                        <h4>Olimpiyat Antrenörü</h4>
+                </div>
+        </div>
+
+     </section>
+
+     <!--price section-->
+     
+     <section class="plans" id="plans">
+                <h2 class="heading">
+                        Kuzeyden <span>Planlarımız</span>
+                </h2>
+                <div class="plans-content">
+                        <div class="box">
+                                <h3>Çaylak</h3>
+                                <h2><span>1500TL/Aylık</span></h2>
+                                <ul>
+                                        <li>İndirilebilir İçerikler</li>
+                                        <li>Kuzey Spor Üyeliği</li>
+                                </ul>
+                                <a href="payment.html" onclick="openModal()">
+                                        Satın Al
+                                        <i class="bx-arrow-right-stroke"></i>
+                                </a>
+                                
+                        </div>
+                        <div class="box">
+                                <h3>Sporcu</h3>
+                                <h2><span>2500TL/Aylık</span></h2>
+                                <ul>
+                                        <li>İndirilebilir İçerikler</li>
+                                        <li>Kuzey Spor Üyeliği</li>
+                                        <li>Antrenör ile Birebir Görüşme</li>
+                                </ul>
+                                <a href="payment.html" onclick="openModal()">
+                                        Satın Al
+                                        <i class="bx-arrow-right-stroke"></i>
+                                </a>
+                                
+                        </div>
+                        <div class="box">
+                                <h3>Premium</h3>
+                                <h2><span>5500TL/Aylık</span></h2>
+                                <ul>
+                                        <li>İndirilebilir İçerikler</li>
+                                        <li>Kuzey Spor Üyeliği</li>
+                                        <li>Antrenör ile Birebir Görüşme</li>
+                                        <li>VİP Dersler</li>
+                                </ul>
+                                <a href="payment.html" onclick="openModal()">
+                                        Satın Al
+                                        <i class="bx bx-arrow-right-stroke"></i>
+                                </a>
+                                
+                        </div>
+                </div>
+     </section>
+
+     <!--Calculator Section Code-->
+
+     <Section class="calculator" id="calculator">
+                <h2>Kezeyden <span>Yağ Oranı Hesaplama</span></h2>
+                <div class="div gender">
+                <select id="gender">
+                        <option value="">Cinsiyet Seçin</option>
+                        <option value="male">Erkek</option>
+                        <option value="female">Kadın</option>
+                </select>
+                </div>
+
+                <div class="inputs">
+ 
+                <label>Boyun (cm):</label>
+                <input type="number" id="neck" step="0.1">
+ 
+                <label>Bel (cm):</label>
+                <input type="number" id="waist" step="0.1">
+ 
+                <label id="hip-label" style="display:none;">Kalça (cm):</label>
+                <input type="number" id="hip" step="0.1" style="display:none;">
+ 
+                <label>Boy (cm):</label>
+                 <input type="number" id="height" step="0.1">
+ 
+                <label>Kilo (kg):</label>
+                 <input type="number" id="weight" step="0.1">
+ 
+                <button onclick="hesapla()">Hesapla</button>
+                </div>
+ 
+                <div id="result" class="result">
+                        <div class="result-text">Yağ Oranı:</div>
+                        <div class="result-box" id="result-value">0%</div>
+                </div>
+     </Section>
+
+     <!--Review Section Code-->
+
+     <seciton class="review" id="review">
+                <div class="review-box">
+                        <h2 class="heading">
+                                Müşterilerimizin Gözünden <span>Kuzey Fitness</span>
+                        </h2>
+                        <div class="wrapper">
+                                <div class="review-item">
+                                        <img src="1.jpg" alt="">
+                                        <h2>Selçuk</h2>
+                                        <div class="rating">
+                                                <i class="bx bx-star" id ="Star"></i>
+                                                <i class="bx bx-star" id ="Star"></i>
+                                                <i class="bx bx-star" id ="Star"></i>
+                                                <i class="bx bx-star" id ="Star"></i>
+                                                <i class="bx bx-star" id ="Star"></i>
+                                        </div>
+
+                                        <p>2 ayda ciddi değişim gördüm. Programlar net, motivasyon yüksek. Kesinlikle tavsiye ederim.</p>
+                                </div>
+
+
+                                <div class="review-item">
+                                        <img src="2.jpg" alt="">
+                                        <h2>Haluk</h2>
+                                        <div class="rating">
+                                                <i class="bx bx-star" id ="Star"></i>
+                                                <i class="bx bx-star" id ="Star"></i>
+                                                <i class="bx bx-star" id ="Star"></i>
+                                                <i class="bx bx-star" id ="Star"></i>
+                                        </div>
+
+                                        <p>İlk başta zorlandım ama sistem çok iyi ilerliyor. Yağ oranım gözle görülür düştü.</p>                                        
+                                </div>
+
+
+                                <div class="review-item">
+                                        <img src="3.jpg" alt="">
+                                        <h2>Selami</h2>
+                                        <div class="rating">
+                                                <i class="bx bx-star" id ="Star"></i>
+                                                <i class="bx bx-star" id ="Star"></i>
+                                                <i class="bx bx-star" id ="Star"></i>
+                                                <i class="bx bx-star" id ="Star"></i>
+                                                <i class="bx bx-star" id ="Star"></i>
+                                        </div>
+
+                                        <p>Spor salonu + planlama çok iyi birleşmiş. Özellikle antrenör desteği fark yaratıyor.</p>                                        
+                                </div>
+                        </div>
+                </div>
+     </section>
+
+
+     <section class="about" id="about">
+                <div class="about-img">
+                        <img src="about.jpg" alt="">
+                </div>
+                <div class="about-content">
+                        <h2 class="heading">
+                                Neden <span>Kuzey Fitness'ı</span> Seçmelisin?
+                        </h2>
+                        <p>Kuzey Fitness, hedefi güçlü bir fiziğe ve disiplinli bir yaşam tarzına ulaşmak isteyenler için kurulmuş modern bir fitness platformudur. Amacımız sadece spor yaptırmak değil, insanlara sürdürülebilir bir gelişim sistemi sunmaktır.</p>
+                        <p>Her bireyin vücudu ve hedefi farklıdır. Bu yüzden kişiye özel antrenman planları, yağ oranı takibi ve performans geliştirme sistemleri ile ilerleme sağlıyoruz.</p>
+                        <p>Kuzey Fitness’ta “bahane yok” mantığıyla çalışırız. Doğru program, doğru disiplin ve sürekli gelişim ile herkes kendi en iyi versiyonuna ulaşabilir.</p>
+                        <a href="#" class="btn">Ücretsiz 1 Günlük Ders Rezarvasyonu</a>
+                </div>
+
+     </section>
+
+
+     <!--Footer Section Code-->
+
+     <footer class="footer">
+        <div class="social">
+                <a href="#"><i class="bx bx-link bx-remove-padding"></i></a>
+                <a href="#"><i class="bx bx-link bx-remove-padding"></i></a>
+                <a href="#"><i class="bx bx-link bx-remove-padding"></i></a>
+        </div>
+        <p class="copyright">
+             &copy; Kuzey Fitness 2026 - Bütün Telif Hakları Saklıdır   
+        </p>
+     </footer>
+
+     <!--Payment Modal-->
+     
+        <div id="payment-modal" class="modal">
+                <div class="modal-content">
+                <h2>Kart Bilgileri</h2>
+
+                        <input type="text" id="cardNumber" placeholder="Kart Numarası">
+                        <input type="text" id="cardName" placeholder="İsim Soyisim">
+
+                <div class="row">
+                        <input type="text" id="cardDate" placeholder="MM/YY">
+                        <input type="text" id="cardCvv" placeholder="CVV">
+                </div>
+
+                        <p id="error" style="color:red;font-size:1.4rem;"></p>
+
+                <button onclick="pay()">Ödeme Yap</button>
+                <span class="close" onclick="closeModal()">✖</span>
+                </div>
+        </div>
+
+     <script src="script.js"></script>
+</body>
+</html>
